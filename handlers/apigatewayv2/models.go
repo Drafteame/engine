@@ -57,7 +57,7 @@ type HTTPRequestContextAuthenticationClientCertValidity struct {
 // HTTPRequestContextAuthorizerDescription contains authorizer information for the request context.
 type HTTPRequestContextAuthorizerDescription struct {
 	JWT    *HTTPRequestContextAuthorizerJWTDescription `json:"jwt,omitempty"`
-	Lambda map[string]interface{}                      `json:"lambda,omitempty"`
+	Lambda map[string]any                              `json:"lambda,omitempty"`
 	IAM    *HTTPRequestContextAuthorizerIAMDescription `json:"iam,omitempty"`
 }
 

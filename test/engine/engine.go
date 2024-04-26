@@ -2,8 +2,9 @@ package engine
 
 import (
 	"context"
-	"github.com/Drafteame/engine"
 	"slices"
+
+	"github.com/Drafteame/engine"
 )
 
 // Engine is a generic engine that can be used to run a chain of decorators and a handler.

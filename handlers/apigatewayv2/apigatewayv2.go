@@ -2,11 +2,12 @@ package apigatewayv2
 
 import (
 	"context"
+	"net/http"
+	"strings"
+
 	"github.com/Drafteame/engine"
 	"github.com/Drafteame/engine/internal/request"
 	"github.com/Drafteame/engine/internal/response"
-	"net/http"
-	"strings"
 )
 
 func NewHandler(handler http.Handler) engine.Handler[HTTPRequest, HTTPResponse] {

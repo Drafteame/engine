@@ -2,9 +2,10 @@ package engine
 
 import (
 	"context"
-	"github.com/aws/aws-lambda-go/lambda"
 	"os"
 	"slices"
+
+	"github.com/aws/aws-lambda-go/lambda"
 )
 
 // Handler is a function that is complaint to with the golang aws-lambda-go sdk.
