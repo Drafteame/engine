@@ -77,6 +77,7 @@ func (ri requestInfo) toRequest(ctx context.Context) (*http.Request, error) {
 	req.Header.Set("X-Stage", ri.stage)
 
 	// custom context values
+	//revive:disable-next-line:context-keys-type
 	req = req.WithContext(context.WithValue(ctx, "httpRequestContext", ri.context))
 
 	// xray support

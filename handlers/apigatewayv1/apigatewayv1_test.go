@@ -2,16 +2,18 @@ package apigatewayv1
 
 import (
 	"context"
-	testengine "github.com/Drafteame/engine/test/engine"
-	"github.com/stretchr/testify/assert"
 	"net/http"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
+
+	testengine "github.com/Drafteame/engine/test/engine"
 )
 
 func TestNewHandler(t *testing.T) {
 	t.Run("Should resolve handler", func(t *testing.T) {
 		s := http.NewServeMux()
-		s.HandleFunc("/test", func(w http.ResponseWriter, r *http.Request) {
+		s.HandleFunc("/test", func(w http.ResponseWriter, _ *http.Request) {
 			w.WriteHeader(http.StatusOK)
 		})
 

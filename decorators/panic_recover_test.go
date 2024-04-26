@@ -2,9 +2,11 @@ package decorators
 
 import (
 	"context"
-	testengine "github.com/Drafteame/engine/test/engine"
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
+
+	testengine "github.com/Drafteame/engine/test/engine"
 )
 
 func TestPanicRecover(t *testing.T) {
@@ -24,7 +26,7 @@ func TestPanicRecover(t *testing.T) {
 
 	t.Run("should recover from panic and log error", func(t *testing.T) {
 		var loggedError error
-		logFunc := func(ctx context.Context, request string, err error) {
+		logFunc := func(_ context.Context, _ string, err error) {
 			loggedError = err
 		}
 

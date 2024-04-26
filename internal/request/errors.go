@@ -1,6 +1,8 @@
 package request
 
-import "errors"
+import (
+	"errors"
+)
 
 var (
 	ErrParsingPathFailed   = errors.New("request: parsing path failed")
